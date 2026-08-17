@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="About HawaScope — how real-time weather and travel advisories work" />
+  <title>About — HawaScope</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌤</text></svg>" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <div class="bg" aria-hidden="true">
+    <div class="orb orb-a"></div>
+    <div class="orb orb-b"></div>
+    <div class="orb orb-c"></div>
+  </div>
+
+  <nav class="navbar">
+    <div class="container nav-inner">
+      <a class="logo" href="index.html">
+        <span class="logo-mark">☁</span>
+        <span>
+          <span class="logo-text">Hawa<span class="grad-text">Scope</span></span>
+          <span class="logo-tag">Bangladesh Weather</span>
+        </span>
+      </a>
+      <button class="nav-toggle" aria-label="Menu">☰</button>
+      <ul class="nav-links">
+        <li><a class="nav-link" href="index.html">Home</a></li>
+        <li><a class="nav-link" href="destinations.html">Destinations</a></li>
+        <li><a class="nav-link" href="forecast.html">Forecast</a></li>
+        <li><a class="nav-link" href="compare.html">Compare</a></li>
+        <li><a class="nav-link" href="guide.html">Travel Guide</a></li>
+        <li><a class="nav-link" href="about.html">About</a></li>
+        <li>
+          <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme" title="Toggle theme">
+            <svg class="theme-icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
+            <svg class="theme-icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg>
+          </button>
+        </li>
+        <li><span class="nav-status"><i class="live-dot"></i><span>Live</span></span></li>
+      </ul>
+    </div>
+  </nav>
+
+  <header class="page-head">
+    <div class="container">
+      <h1 class="page-title">About <span class="grad-text">HawaScope</span></h1>
+      <p class="page-sub">Real-time weather meets travel planning — built for Bangladesh.</p>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="about-hero" aria-labelledby="aboutHeroTitle">
+      <div class="about-hero-bg" style="background-image: url('https://images.unsplash.com/photo-1518837695005-2083093ee35b?w=1600&q=80')" aria-hidden="true"></div>
+      <div class="about-hero-overlay" aria-hidden="true"></div>
+      <div class="container about-hero-content">
+        <h2 id="aboutHeroTitle" class="about-hero-title">Where Weather Meets Wanderlust</h2>
+        <p class="about-hero-sub">Real-time intelligence for every journey across Bangladesh</p>
+      </div>
+    </section>
+
+    <div class="about-grid">
+      <div class="about-block about-block--with-media">
+        <div class="about-block-media" style="background-image: url('assets/guide-hero.jpg')" aria-hidden="true"></div>
+        <h3><span class="gb-ico">🌤</span> What is HawaScope?</h3>
+        <p>HawaScope pulls live weather for 16 major destinations across Bangladesh and turns it into a simple travel verdict: <b>Good</b>, <b>Caution</b> or <b>Critical</b>. Whether you're heading to the beaches of Cox's Bazar, the tea hills of Sreemangal or the mangroves of the Sundarbans, you can check conditions and get destination-specific guidance before you pack.</p>
+      </div>
+
+      <div class="about-block about-block--with-media">
+        <div class="about-block-media" style="background-image: url('https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=400&q=80')" aria-hidden="true"></div>
+        <h3><span class="gb-ico">⚙️</span> How it works</h3>
+        <ul>
+          <li><span class="gi">•</span><span>Current conditions and 5-day forecasts come from the OpenWeatherMap API.</span></li>
+          <li><span class="gi">•</span><span>Travel status is computed from live temperature, precipitation, wind speed and visibility.</span></li>
+          <li><span class="gi">•</span><span>The dashboard refreshes automatically every 10 minutes.</span></li>
+          <li><span class="gi">•</span><span>Search, filter, compare and forecast tools are all client-side — no signup needed.</span></li>
+        </ul>
+      </div>
+
+      <div class="about-block about-block--with-media" id="contact">
+        <div class="about-block-media" style="background-image: url('assets/guide-hero.jpg')" aria-hidden="true"></div>
+        <h3><span class="gb-ico">📬</span> Contact</h3>
+        <p>Have feedback, found a bug, or want a destination added? Reach out and we'll take a look.</p>
+        <ul>
+          <li><span class="gi">✉️</span><span>Email: <b style="color:var(--text)">hello@hawascope.bd</b></span></li>
+          <li><span class="gi">🐦</span><span>X / Twitter: <b style="color:var(--text)">@hawascope</b></span></li>
+          <li><span class="gi">🌐</span><span>Built for travellers, operators and local guides across Bangladesh.</span></li>
+        </ul>
+      </div>
+
+      <div class="about-block about-block--with-media">
+        <div class="about-block-media" style="background-image: url('https://images.unsplash.com/photo-1504608524841-42fe6f032b4b?w=400&q=80')" aria-hidden="true"></div>
+        <h3><span class="gb-ico">🗄</span> Data source</h3>
+        <p>Weather data is served primarily by <b style="color:var(--text)">Meteoblue</b> (using the site's API key), with automatic fallback to <b style="color:var(--text)">Open-Meteo</b> (free, no key required). Destination coordinates use publicly available geographic data. Status thresholds (storm, flood risk, heat, wind, fog) are heuristic rules — not official government warnings.</p>
+      </div>
+    </div>
+
+    <section class="about-stats" aria-labelledby="aboutStatsTitle">
+      <div class="about-stats-bg" style="background-image: url('https://images.unsplash.com/photo-1504608524841-42fe6f032b4b?w=1200&q=80')" aria-hidden="true"></div>
+      <div class="about-stats-overlay" aria-hidden="true"></div>
+      <div class="container about-stats-content">
+        <h2 id="aboutStatsTitle" class="visually-hidden">Platform Statistics</h2>
+        <div class="about-stats-grid">
+          <div class="about-stat">
+            <span class="about-stat-value">16</span>
+            <span class="about-stat-label">Destinations Monitored</span>
+          </div>
+          <div class="about-stat">
+            <span class="about-stat-value">10 min</span>
+            <span class="about-stat-label">Auto-refresh Interval</span>
+          </div>
+          <div class="about-stat">
+            <span class="about-stat-value">3</span>
+            <span class="about-stat-label">Weather Providers</span>
+          </div>
+          <div class="about-stat">
+            <span class="about-stat-value">100%</span>
+            <span class="about-stat-label">Client-side Processing</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="disclaimer-box">
+      <b>⚠️ Disclaimer:</b> HawaScope is an advisory tool and is not a substitute for official alerts from the Bangladesh Meteorological Department, the Disaster Management authorities or the Tourist Police. Weather can change quickly — always verify current conditions and follow local guidance before and during travel.
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>Built with live weather data · Travel status is advisory only — always check official alerts before travelling.</p>
+      <div class="footer-links">
+        <a href="about.html">About</a>
+        <a href="guide.html">Travel Guide</a>
+        <a href="about.html#contact">Contact</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/shared.js"></script>
+  <script>
+    if (window.HS) HS.setupNav();
+  </script>
+</body>
+</html>

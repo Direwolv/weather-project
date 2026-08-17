@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Bangladesh travel safety guide — packing, seasons, emergency numbers" />
+  <title>Travel Guide — HawaScope</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌤</text></svg>" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <div class="bg" aria-hidden="true">
+    <div class="orb orb-a"></div>
+    <div class="orb orb-b"></div>
+    <div class="orb orb-c"></div>
+  </div>
+
+  <nav class="navbar">
+    <div class="container nav-inner">
+      <a class="logo" href="index.html">
+        <span class="logo-mark">☁</span>
+        <span>
+          <span class="logo-text">Hawa<span class="grad-text">Scope</span></span>
+          <span class="logo-tag">Bangladesh Weather</span>
+        </span>
+      </a>
+      <button class="nav-toggle" aria-label="Menu">☰</button>
+      <ul class="nav-links">
+        <li><a class="nav-link" href="index.html">Home</a></li>
+        <li><a class="nav-link" href="destinations.html">Destinations</a></li>
+        <li><a class="nav-link" href="forecast.html">Forecast</a></li>
+        <li><a class="nav-link" href="compare.html">Compare</a></li>
+        <li><a class="nav-link" href="guide.html">Travel Guide</a></li>
+        <li><a class="nav-link" href="about.html">About</a></li>
+        <li>
+          <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme" title="Toggle theme">
+            <svg class="theme-icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
+            <svg class="theme-icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg>
+          </button>
+        </li>
+        <li><span class="nav-status"><i class="live-dot"></i><span>Live</span></span></li>
+      </ul>
+    </div>
+  </nav>
+
+  <header class="page-head">
+    <div class="container">
+      <h1 class="page-title">Travel <span class="grad-text">Guide</span></h1>
+      <p class="page-sub">Weather-smart tips for exploring Bangladesh — what to pack, when to go, and who to call in an emergency.</p>
+    </div>
+  </header>
+
+<main class="container">
+    <section class="guide-hero" aria-labelledby="guideHeroTitle">
+      <div class="guide-hero-bg" style="background-image: url('assets/guide-hero.jpg')" aria-hidden="true"></div>
+      <div class="guide-hero-overlay" aria-hidden="true"></div>
+      <div class="container guide-hero-content">
+        <h2 id="guideHeroTitle" class="guide-hero-title">Bangladesh Through the Seasons</h2>
+        <p class="guide-hero-sub">From misty tea gardens to golden beaches — weather shapes every journey</p>
+      </div>
+    </section>
+
+    <div class="guide-page-grid">
+      <div class="guide-block guide-block--wide guide-block--with-media">
+        <div class="guide-block-media" style="background-image: url('assets/guide-hero.jpg')" aria-hidden="true"></div>
+        <h3><span class="gb-ico">🌦</span> Best time to visit</h3>
+        <table class="season-table">
+          <thead><tr><th>Season</th><th>Months</th><th>Verdict</th></tr></thead>
+          <tbody>
+            <tr><td><b>Winter</b></td><td>Nov – Feb</td><td>Mild & dry <span class="tag tag-best">BEST</span></td></tr>
+            <tr><td><b>Pre-monsoon</b></td><td>Mar – May</td><td>Hot, sporadic storms <span class="tag tag-bad">HEAT</span></td></tr>
+            <tr><td><b>Monsoon</b></td><td>Jun – Sep</td><td>Heavy rain & floods <span class="tag tag-bad">RAINY</span></td></tr>
+            <tr><td><b>Post-monsoon</b></td><td>Oct</td><td>Cooling down, greener <span class="tag tag-best">GOOD</span></td></tr>
+          </tbody>
+        </table>
+        <p style="color:var(--muted);font-size:0.8rem;margin-top:0.8rem">Cyclone season peaks Apr–May and Oct–Nov along the coast — always check the live status of Cox's Bazar, Kuakata and Saint Martin's.</p>
+      </div>
+
+      <div class="guide-block guide-block--packing">
+        <h3><span class="gb-ico">🎒</span> Weather-wise packing list</h3>
+        <ul>
+          <li><span class="gi">✓</span><span><b>Rain gear</b> — compact umbrella or poncho (May–Oct rain is common)</span></li>
+          <li><span class="gi">✓</span><span><b>Quick-dry clothing</b> for humid coastal and river destinations</span></li>
+          <li><span class="gi">✓</span><span><b>Sun protection</b> — SPF 50+, sunglasses, wide hat (Apr–Jun peak heat)</span></li>
+          <li><span class="gi">✓</span><span><b>Reusable water bottle</b> + oral rehydration salts for hot days</span></li>
+          <li><span class="gi">✓</span><span><b>Non-slip footwear</b> for wet streets, hills and boat decks</span></li>
+          <li><span class="gi">✓</span><span><b>Light layers</b> — hill tracts (Bandarban, Rangamati) get cool at night</span></li>
+          <li><span class="gi">✓</span><span><b>Power bank</b> and offline maps — signal drops in remote areas</span></li>
+        </ul>
+      </div>
+
+      <div class="guide-block guide-block--compact">
+        <h3><span class="gb-ico">🚨</span> Emergency numbers (Bangladesh)</h3>
+        <div class="em-list">
+          <div class="em-item"><span class="em-name">National emergency (Police, Fire, Ambulance)</span><span class="em-num">999</span></div>
+          <div class="em-item"><span class="em-name">Tourist Police helpline</span><span class="em-num">1090</span></div>
+          <div class="em-item"><span class="em-name">Women & children helpline</span><span class="em-num">109</span></div>
+          <div class="em-item"><span class="em-name">Fire service</span><span class="em-num">102</span></div>
+          <div class="em-item"><span class="em-name">Government information services</span><span class="em-num">333</span></div>
+        </div>
+      </div>
+
+      <div class="guide-block guide-block--safety">
+        <h3><span class="gb-ico">⚠️</span> Weather safety on the road</h3>
+        <ul>
+          <li><span class="gi">→</span><span><b>Flooded roads:</b> never drive or walk through flowing water — even 15 cm can knock you over.</span></li>
+          <li><span class="gi">→</span><span><b>Lightning:</b> in a thunderstorm, leave open fields, beaches and hilltops; avoid trees and water.</span></li>
+          <li><span class="gi">→</span><span><b>Hill routes (Bandarban/Rangamati):</b> slow down on muddy or foggy hairpin bends; hire local drivers.</span></li>
+          <li><span class="gi">→</span><span><b>Boats (Sundarbans, islands):</b> check sea conditions before any launch or trawler ride.</span></li>
+          <li><span class="gi">→</span><span><b>Heat:</b> travel early morning/evening, rest at midday, and watch for heatstroke signs.</span></li>
+          <li><span class="gi">→</span><span><b>Always</b> follow Bangladesh Meteorological Department alerts and local advisories over app suggestions.</span></li>
+        </ul>
+      </div>
+
+      <div class="guide-block guide-block--status">
+        <h3><span class="gb-ico">🧭</span> How HawaScope status works</h3>
+        <ul>
+          <li><span class="gi">🟢</span><span><b>Good</b> — clear/mild conditions, no warnings. Ideal for sightseeing and transport.</span></li>
+          <li><span class="gi">🟡</span><span><b>Caution</b> — rain, heat, fog or breeze. Travel is possible with extra planning.</span></li>
+          <li><span class="gi">🔴</span><span><b>Critical</b> — storms, heavy rain, extreme heat or high winds. Reschedule non-essential travel.</span></li>
+          <li><span class="gi">•</span><span>Status is auto-computed from live weather (temperature, precipitation, wind, visibility) every few minutes.</span></li>
+        </ul>
+      </div>
+
+      <div class="guide-block guide-block--cta guide-block--with-media">
+        <div class="guide-block-media" style="background-image: url('assets/guide-hero.jpg')" aria-hidden="true"></div>
+        <h3><span class="gb-ico">🗺</span> Top picks right now</h3>
+        <p style="color:var(--muted);font-size:0.88rem;line-height:1.6">Use the live dashboard to find which destinations are green today. During Nov–Feb, Sreemangal's tea hills, Bagerhat's mosques and Paharpur's ruins are at their best. In the monsoon, prefer cultural sights over the coast unless the sea is calm.</p>
+        <p style="margin-top:0.8rem"><a class="btn btn-primary" href="destinations.html">See live status</a></p>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>Built with live weather data · Travel status is advisory only — always check official alerts before travelling.</p>
+      <div class="footer-links">
+        <a href="about.html">About</a>
+        <a href="guide.html">Travel Guide</a>
+        <a href="about.html#contact">Contact</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/shared.js"></script>
+  <script>
+    if (window.HS) HS.setupNav();
+  </script>
+</body>
+</html>

@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="HawaScope — real-time weather and travel guide for Bangladesh destinations" />
+  <title>HawaScope — Bangladesh Travel Weather</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌤</text></svg>" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <div class="bg" aria-hidden="true">
+    <div class="orb orb-a"></div>
+    <div class="orb orb-b"></div>
+    <div class="orb orb-c"></div>
+  </div>
+
+  <nav class="navbar">
+    <div class="container nav-inner">
+      <a class="logo" href="index.html">
+        <span class="logo-mark">☁</span>
+        <span>
+          <span class="logo-text">Hawa<span class="grad-text">Scope</span></span>
+          <span class="logo-tag">Bangladesh Weather</span>
+        </span>
+      </a>
+      <button class="nav-toggle" aria-label="Menu">☰</button>
+      <ul class="nav-links">
+        <li><a class="nav-link" href="index.html">Home</a></li>
+        <li><a class="nav-link" href="destinations.html">Destinations</a></li>
+        <li><a class="nav-link" href="forecast.html">Forecast</a></li>
+        <li><a class="nav-link" href="compare.html">Compare</a></li>
+        <li><a class="nav-link" href="guide.html">Travel Guide</a></li>
+        <li><a class="nav-link" href="about.html">About</a></li>
+        <li>
+          <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme" title="Toggle theme">
+            <svg class="theme-icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
+            <svg class="theme-icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg>
+          </button>
+        </li>
+        <li><span class="nav-status"><i class="live-dot"></i><span id="navStatus">Live</span></span></li>
+      </ul>
+    </div>
+  </nav>
+
+  <header class="hero">
+    <div class="hero-weather-icons" aria-hidden="true">
+      <span class="float-icon">☀️</span>
+      <span class="float-icon">🌧</span>
+      <span class="float-icon">⛅</span>
+      <span class="float-icon">🌊</span>
+      <span class="float-icon">⛈</span>
+      <span class="float-icon">🌫</span>
+    </div>
+    <div class="container hero-inner">
+      <div class="hero-badge"><span>🇧🇩</span> Live across 16 destinations · Bangladesh</div>
+      <h1 class="hero-title">Plan travel with the <span class="grad-text">weather in mind</span></h1>
+      <p class="hero-sub">HawaScope combines real-time weather with smart travel advisories — so you always know which destinations in Bangladesh are safe, need caution, or are under critical weather today.</p>
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="destinations.html">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18M5 21V7l7-4 7 4v14M9 9h.01M9 13h.01M9 17h.01M15 9h.01M15 13h.01M15 17h.01"/></svg>
+          Explore destinations
+        </a>
+        <a class="btn btn-ghost" href="forecast.html">View 5-day forecast</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="stat-row" id="statRow">
+      <div class="stat accent"><div class="stat-value" id="statTotal">—</div><div class="stat-label">Destinations</div></div>
+      <div class="stat good"><div class="stat-value" id="statGood">—</div><div class="stat-label">Safe to travel</div></div>
+      <div class="stat caution"><div class="stat-value" id="statCaution">—</div><div class="stat-label">Caution</div></div>
+      <div class="stat critical"><div class="stat-value" id="statCritical">—</div><div class="stat-label">Critical</div></div>
+    </section>
+
+    <section class="status-alert" id="statusAlert" hidden></section>
+
+    <div class="section-head">
+      <div>
+        <h2>Today's travel status</h2>
+        <p class="section-sub" id="lastUpdated">Fetching live weather…</p>
+      </div>
+      <div style="display:flex;align-items:center;gap:0.9rem">
+        <button id="refreshBtn" class="btn btn-ghost btn-sm" title="Refresh weather data">Refresh</button>
+        <div class="view-toggle" role="group" aria-label="View mode">
+          <button type="button" class="view-btn active" data-view="grid" aria-pressed="true" title="Grid view">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg>
+          </button>
+          <button type="button" class="view-btn" data-view="list" aria-pressed="false" title="List view">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+          </button>
+        </div>
+        <a class="section-link" href="destinations.html">View all <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+      </div>
+    </div>
+
+    <section class="dest-grid critical-row" id="criticalGrid" hidden></section>
+    <section class="dest-grid main-grid" id="destGrid"></section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>Built with live weather data · Travel status is advisory only — always check official alerts before travelling.</p>
+      <div class="footer-links">
+        <a href="about.html">About</a>
+        <a href="guide.html">Travel Guide</a>
+        <a href="about.html#contact">Contact</a>
+      </div>
+    </div>
+  </footer>
+
+  <div class="modal-overlay" id="modalOverlay" hidden>
+    <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+      <button class="modal-close" id="modalClose" aria-label="Close">×</button>
+      <div id="modalBody"></div>
+    </div>
+  </div>
+
+  <div id="toast" class="toast" hidden></div>
+
+  <script src="js/shared.js"></script>
+  <script src="js/home.js"></script>
+</body>
+</html>
