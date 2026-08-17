@@ -1861,6 +1861,7 @@ body, .nav-link, .btn, .chip, .search-box input, .summary-bar, .legend, .status-
 .footer-links { display: flex; gap: 1.2rem; }
 .footer-links a { color: var(--muted); font-size: 0.8rem; text-decoration: none; }
 .footer-links a:hover { color: var(--text); }
+.footer-copy { margin-top: 1.2rem; padding-top: 1.1rem; border-top: 1px solid var(--border); text-align: center; color: var(--muted); font-size: 0.78rem; }
 
 /* ---------- Responsive ---------- */
 @media (max-width: 860px) {
