@@ -364,10 +364,10 @@
         <ul class="guide-list">${guideList}</ul>
       </div>
       <div class="modal-actions">
-        <a class="btn btn-ghost" href="forecast.html?d=${encodeURIComponent(dest.name)}">
+        <a class="btn btn-ghost" href="/forecast?d=${encodeURIComponent(dest.name)}">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 3v12M7 10l5 5 5-5M5 21h14"/></svg>5-day forecast
         </a>
-        <a class="btn btn-ghost" href="compare.html?d=${encodeURIComponent(dest.name)}">
+        <a class="btn btn-ghost" href="/compare?d=${encodeURIComponent(dest.name)}">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20V10M18 20V4M6 20v-4"/></svg>Compare
         </a>
       </div>
@@ -745,10 +745,10 @@
         if (e.target.tagName === 'A') links.classList.remove('open');
       });
     }
-    const path = location.pathname.split('/').pop() || 'index.html';
+    const path = location.pathname.replace(/\.html$/, '').split('/').filter(Boolean).join('/') || 'index.html';
     document.querySelectorAll('.nav-link').forEach(a => {
-      const href = a.getAttribute('href');
-      if (href === path || (path === '' && href === 'index.html')) a.classList.add('active');
+      const href = a.getAttribute('href').replace(/^\/+/, '').replace(/\.html$/, '');
+      if (href === path || (path === 'index.html' && href === '')) a.classList.add('active');
     });
     setupTheme();
   }
